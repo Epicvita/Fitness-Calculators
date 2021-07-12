@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="bmiApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMI Calculator</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- Main Content starts here -->
+
+<body data-ng-controller="bmiController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 m-auto BMI">
+                <h3 class="jumbotron text-center">BMI Calculator</h3>
+
+                <form role="form">
+                    <div class="form-group">
+                        <div class="radio mb-3">
+                            <label>
+                                <input type="radio" ng-model="units" value="imperial">
+                                <span class="label label-danger">Imperial</span>
+                            </label>
+                        </div>
+
+                        <div class="radio mb-3">
+                            <label>
+                                <input type="radio" ng-model="units" value="metric">
+                                <span class="label label-success">Metric</span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div id="metric" ng-show="units == 'imperial'">
+                        <div class="form-group mb-3">
+                            <label for="weight">Weight (lb):</label>
+                            <input type="number" ng-model="weight_lb" id="weight" placeholder="weight in lb" class="form-control">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="weight_foot">Height (foot):</label>
+                            <input type="number" ng-model="height_foot" id="weight_foot" placeholder="height in foot" class="form-control">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="height_inch">Height (inch):</label>
+                            <input type="number" ng-model="height_inch" id="height_inch" placeholder="height in inch" class="form-control">
+                        </div>
+                    </div>
+
+                    <div id="metric" ng-show="units == 'metric'">
+                        <div class="form-group">
+                            <label for="weight_kg">Weight (kg):</label>
+                            <input type="number" ng-model="weight_kg" id="weight_kg" placeholder="weight in kg" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="height_cm">Height (cm):</label>
+                            <input type="number" ng-model="height_cm" id="height_cm" placeholder="height in cm" class="form-control">
+                        </div>
+
+                    </div>
+                </form>
+
+                <!-- Calculated BMI is shown here -->
+                <div class="well text-center">
+                    <h3 class="text-muted">Calculated BMI</h3>
+                    <h2><span class="label label-{{catClass}}" title="{{catTitle}}">{{bmi | number:1}}</span></h2>
+                    <h4 class="text-muted">{{catTitle}}</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script data-require="angular.js@1.2.13" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

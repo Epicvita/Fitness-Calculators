@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MACRO CALCULATOR</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- calculator start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <div class="Macro main">
+                        <h2 class="Macro-Header">Macro Calculator</h2>
+                        <div class="container">
+
+                            <div class="mb-3">
+                                <label for="Age" class="form-label">Age</label>
+                                <input type="number" class="form-control" id="Age" name="age" placeholder="Years" value="">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Sex</label><br>
+                                <input type="radio" id="male" name="sex" value="male" checked="checked" />
+                                <label class="form-label" for="male">Male</label>
+                                <input type="radio" id="female" name="sex" value="female" />
+                                <label class="form-label" for="female">Female</label>
+                            </div>
+
+
+                            <div class="mb-3 col-lg-6">
+                                <label class="form-label">Height</label><br>
+                                <input name="height" value="feet" checked="checked" id="feet" type="radio" />
+                                <label class="form-label" for="feet">Feet</label>
+                                <input name="height" value="meters" id="meter" type="radio" />
+                                <label class="form-label" for="meter">Meters</label>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <div class="col">
+                                    <input class="form-control" name="height-1" id="height-1" placeholder="Feet" value="" type="number" min="0" />
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" name="height-2" id="height-2" placeholder="Inches" value="" type="number" min="0" />
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 col-lg-6">
+                                <label class="form-label">Weight</label><br>
+                                <input name="wheight" value="pounds" checked="checked" id="pounds" type="radio" />
+                                <label class="form-label" for="pounds">Pounds</label>
+                                <input name="wheight" value="kilos" id="kilograms" type="radio" />
+                                <label class="form-label" for="kilograms">Kilograms</label>
+                            </div>
+
+
+                            <div class="col-lg-12 mb-3 ">
+                                <input name="weight-input" class="form-control" id="weight" placeholder="Pounds" type="number" type="" min="0" />
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label class="form-label">Goal</label><br>
+                                <div class="calc-row">
+                                    <input type="radio" id="goal1" name="goal" value="fat-loss" checked="checked" />
+                                    <label class="form-label" for="goal1"><span></span>Fat Loss</label>
+                                </div>
+                                <div class="calc-row">
+                                    <input type="radio" id="goal2" name="goal" value="maintenance" />
+                                    <label class="form-label" for="mgoal2"><span></span>Maintenance</label>
+                                </div>
+                                <div class="calc-row">
+                                    <input type="radio" id="goal3" name="goal" value="gain" />
+                                    <label class="form-label" for="goal3"><span></span>Muscle Gainz</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Activity Level</label><br>
+                                <div class="calc-row">
+                                    <input type="radio" id="activity1" name="activity" value="L" checked="checked" />
+                                    <label class="form-label" for="activity1"><span></span>Lightly active (moderate exercise but sedentary job)</label>
+                                </div>
+                                <div class="calc-row">
+                                    <input type="radio" id="macros-activity2" name="activity" value="M" />
+                                    <label class="form-label" for="activity2"><span></span>Moderately active (intense exercise but sedentary job)</label>
+                                </div>
+                                <div class="calc-row">
+                                    <input type="radio" id="activity3" name="activity" value="V" />
+                                    <label class="form-label" for="activity3"><span></span>Very active (moderate exercise and active job)</label>
+                                </div>
+                                <div class="calc-row"><input type="radio" id="activity4" name="activity" value="E" />
+                                    <label class="form-label" for="activity4"><span></span>Extra active (intense exercise and active job)</label>
+                                </div>
+                            </div>
+
+                            <button class="submit btn btn-primary" type="button">Calculate</button>
+                                <div class="show-answer" style="margin-top: 30px">
+                                    <h3>Carbs: <span class="answer-Carbs"></span></h3>
+                                    <h3>Protein: <span class="answer-Protein"></span></h3>
+                                    <h3>Fats: <span class="answer-Fats"></span></h3>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

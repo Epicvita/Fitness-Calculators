@@ -1,0 +1,12 @@
+/* Styles go here */
+.BMI{
+    border: 1px solid #d3d3d3;
+}
+.jumbotron{
+    background-color: aliceblue;
+    padding: 20px 0
+}
+.well{
+    background-color: aliceblue;;
+    padding: 20px 0
+}

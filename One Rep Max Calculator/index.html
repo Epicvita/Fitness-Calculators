@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rep Max Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 m-auto">
+                    <div class="Main">
+                        <h2 class="Rep-header">One-Rep Max Calculator</h2>
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="mb-3  col-lg-12">
+                                    <label class="form-label">Weight</label><br>
+                                    <input name="weight" value="lbs" checked="checked" id="male" type="radio" />
+                                    <label class="form-label" for="male">Pounds</label>
+                                    <input id="female" name="weight" value="kgs" type="radio" />
+                                    <label class="form-label" for="female">Kilograms</label>
+                                </div>
+
+                                <div class="col-lg-12 mb-3">
+                                    <input type="number" class="form-control weight" name="weight" placeholder="weight lifted" value="" />
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <label class="form-label">Reps</label><br>
+                                    <select class="form-select">
+                                        <option value="1">1</option>
+                                        <option value="0.95">2</option>
+                                        <option value="0.93">3</option>
+                                        <option value="0.9">4</option>
+                                        <option value="0.87">5</option>
+                                        <option value="0.85">6</option>
+                                        <option value="0.83">7</option>
+                                        <option value="0.8">8</option>
+                                        <option value="0.77">9</option>
+                                        <option value="0.75">10</option>
+                                        <option value="0.73">11</option>
+                                        <option value="0.70">12</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+
+
+                            <button class="btn btn-primary submit" type="button">Calculate</button>
+
+                            <h3 class="message"></h3>
+                            <hr />
+                            <div class="all-result">
+                                 <h3 class="result">Your One-Rep Max (one-rm): ?</h3>
+                            <div class="calc-answer row">
+                                <div class="col-6">
+                                    95%: <span id="1rm95">?</span><br>
+                                    90%: <span id="1rm90">?</span><br>
+                                    85%: <span id="1rm85">?</span><br>
+                                    80%: <span id="1rm80">?</span><br>
+                                    75%: <span id="1rm75">?</span>
+                                </div>
+                                <div class="col-6">
+                                    70%: <span id="1rm70">?</span><br>
+                                    65%: <span id="1rm65">?</span><br>
+                                    60%: <span id="1rm60">?</span><br>
+                                    55%: <span id="1rm55">?</span><br>
+                                    50%: <span id="1rm50">?</span>
+                                </div>
+                            </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+            <script src="main.js"></script>
+</body>
+
+</html>

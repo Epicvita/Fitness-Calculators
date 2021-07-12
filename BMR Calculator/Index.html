@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Bmr Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 m-auto">
+                    <div class="Main BMR">
+                        <h2 class="BMR-Header">Basal Metabolic Rate Calculator</h2>
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="mb-3 col-lg-12">
+                                    <label for="Age" class="form-label">Age</label>
+                                    <input type="number" class="form-control" id="Age" aria-describedby="emailHelp"
+                                        name="age" placeholder="Years" min="0" value="" required>
+                                </div>
+
+                                <div class="mb-3  col-lg-6">
+                                    <label class="form-label">Sex</label><br>
+                                    <input name="sex" value="male" checked="checked" id="male" type="radio" />
+                                    <label class="form-label" for="male">Male</label>
+                                    <input id="female" name="sex" value="female" type="radio" />
+                                    <label class="form-label" for="female">Female</label>
+                                </div>
+
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label">Height</label><br>
+                                    <input name="height" value="feet" checked="checked" id="feet" type="radio" />
+                                    <label class="form-label" for="feet">Feet</label>
+                                    <input name="height" value="meters" id="meter" type="radio" />
+                                    <label class="form-label" for="meter">Meters</label>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col">
+                                        <input class="form-control" name="height-1" id="height-1" placeholder="Feet"
+                                            value="" type="number" min="0" />
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" name="height-2" id="height-2" placeholder="Inches"
+                                            value="" type="number" min="0" />
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label">Weight</label><br>
+                                    <input name="wheight" value="pounds" checked="checked" id="pounds" type="radio" />
+                                    <label class="form-label" for="pounds">Pounds</label>
+                                    <input name="wheight" value="kilos" id="kilograms" type="radio" />
+                                    <label class="form-label" for="kilograms">Kilograms</label>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <input name="weight-input" class="form-control" id="weight" placeholder="Pounds"
+                                        type="" min="0" />
+                                </div>
+                                
+                                <button class="bb-flat-btn submit btn btn-primary" type="button">Calculate</button>
+                                <div class="show-answer" style="margin-top: 30px">
+                                    <h3>Your BMR: <span class="answer"></span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="Main.js"></script>
+</body>
+
+</html>
